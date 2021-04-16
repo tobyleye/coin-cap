@@ -18,7 +18,7 @@ function App() {
         transform: show ? 'translateY(0)' : 'translateY(-500px)'
       }}>Coin-cap</h1>
       <p style={{ fontStyle: 'italic', opacity: show ? 1 : 0, transition: 'opacity .45s ease 1s'}}>Coming soon</p>
-      <button className="cta" onClick={dramaticIntro}>What's this</button>
+      <button className="cta" onClick={dramaticIntro}>What's this?</button>
     </div>
   );
 }
