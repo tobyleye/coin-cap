@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.App .title {
+  transition: transform .55s cubic-bezier(.6,-0.1,.2,1.37);
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.App p {
+  font-style: italic;
+  transition: opacity .45s ease 1s
+}
+
 .App .cta {
   position: absolute;
   left: 50%;
