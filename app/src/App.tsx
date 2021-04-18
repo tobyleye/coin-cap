@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ListingTable from "./ListingTable"
+// import { Intro } from "./Intro"
 import "./App.css";
 
 async function fetchListings(): Promise<any> {
@@ -9,12 +10,7 @@ async function fetchListings(): Promise<any> {
 
 
 function App() {
-  const [show, setShow] = useState(false);
-  const [listings, setListings] = useState([])
-
-  function dramaticIntro(): void {
-    !show && setShow(true);
-  }
+const [listings, setListings] = useState([])
 
   useEffect(() => {
     fetchListings().then(data => {
@@ -24,22 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1
-        className="title"
-        style={{
-          transform: show ? "translateY(0)" : "translateY(-500px)",
-        }}
-      >
-        Coin-cap
-      </h1>
-      <p style={{ opacity: show ? 1 : 0 }}>Coming soon</p>
-      <button className="cta" onClick={dramaticIntro}>
-        What's this?
-      </button> */}
-
-       {/* { listings.map(item => (
-         <Listing />
-       ))} */}
+      {/* <Intro /> */}
        { listings.length > 0 ? (
           <ListingTable listings={listings} />
        ) : null }
