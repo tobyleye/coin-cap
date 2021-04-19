@@ -20,7 +20,7 @@ interface Currency {
   
   function ListingTable({ listings }: { listings: Array<Currency>} ) {
     return (
-      <table>
+      <table className="table">
         <thead>
           <tr>
           <td>No</td>
@@ -37,9 +37,9 @@ interface Currency {
              <td>{index+1}</td>
             <td>{item.name}</td>
             <td>{item.symbol}</td>
-            <td>{formatNumberOrPrice(item.quote.USD.market_cap)}</td>
-            <td>{formatNumberOrPrice(item.quote.USD.price)}</td>
-            <td>{formatNumberOrPrice(item.total_supply)}</td>
+            <td>${formatNumberOrPrice(item.quote.USD.market_cap)}</td>
+            <td>${formatNumberOrPrice(item.quote.USD.price)}</td>
+            <td>${formatNumberOrPrice(item.total_supply)}</td>
             </tr>
           ))}
         </tbody>
