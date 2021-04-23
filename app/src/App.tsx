@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ListingTable from "./ListingTable"
-// import { Intro } from "./Intro"
 import "./App.css";
 
 async function fetchListings(): Promise<any> {
@@ -20,7 +19,6 @@ const [listings, setListings] = useState([])
 
   return (
     <div className="App">
-      {/* <Intro /> */}
        { listings.length > 0 ? (
           <ListingTable listings={listings} />
        ) : null }
